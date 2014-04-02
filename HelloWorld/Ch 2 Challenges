@@ -1,3 +1,0 @@
-first=input("What is your favorite food?")
-second=input("what is your favorite food?")
-print(first + second)

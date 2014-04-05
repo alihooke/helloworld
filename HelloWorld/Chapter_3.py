@@ -16,5 +16,12 @@ def challenge_1():
         print("Idleness is the holiday of fools.")
 
 def challenge_2():
-    
+    import random
+    coinflip = random.randint(1, 2)
+    if coinflip() == 1:
+        print("heads")
+    if coinflip() == 2:
+        print("tails")
+
+        while heads
 

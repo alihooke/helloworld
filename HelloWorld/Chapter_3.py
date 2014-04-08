@@ -23,5 +23,15 @@ def challenge_2():
     if coinflip() == 2:
         print("tails")
 
-        while heads
+
+def challenge_1_2():
+    import random
+    fortunelist=["Something you lost will soon turn up.","You will be invited to an exciting event.","You will be invited to an exciting event.","The one you love is closer than you think.","Sun always shines after a downpour.","Idleness is the holiday of fools."]
+    fortune = random.choice(fortunelist)
+    print(fortune)
+
+challenge_1_2()
+
+
+
 

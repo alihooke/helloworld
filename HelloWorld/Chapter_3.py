@@ -25,23 +25,46 @@ def challenge_1_2():
 
 def challenge_2():
     import random
-    heads = 0
-    tails = 0
-    count = 0
+    heads = tails = 0
 
     flips = int(input("How many times shall I flip a coin?"))
-    while flips > count:
+    while flips > heads+tails:
         coinflip = random.randint(0,1)
         if coinflip == 0:
-            count = count + 1
             heads = heads + 1
         elif coinflip == 1:
-            count = count + 1
             tails = tails + 1
         else:
             print("error")
     print("There were", heads, "heads and", tails, "tails.")
 
-challenge_2()
+def challenge_3():
+    import random
+    number = random.randint(1,100)
 
+    print("Welcome to Guess My Number")
+    print("I'm thinking of a number between 1 and 100, try to guess it in as few attempts as possible")
+    for attempt in range(5):
+        guess = int(input("Take a guess: "))
+        if guess != number:
+            print("Lower" if guess > number else "Higher")
+        else:
+            print("Got it!")
+            return
+    print("you lose!")
 
+def challenge_4():
+    upper_bound = 100
+    lower_bound = 0
+    print("Think of a number between 1 and 100")
+    response = "not correct"
+    while response != "correct":
+        guess = (upper_bound - lower_bound)//2 + lower_bound
+        response = input("Is the number lower or higher than %s? If it is correct, write correct" % str(guess))
+        if response == "higher":
+            lower_bound = guess + 1
+        elif response == "lower":
+            upper_bound = guess - 1
+    print("Yay!")
+
+challenge_4()

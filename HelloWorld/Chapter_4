@@ -1,0 +1,10 @@
+def challenge_1():
+    for i in range (0, 301, 100):
+        print(i)
+
+
+def challenge_2():
+    message = input("Enter a message:")
+    print(message[::-1])
+
+challenge_2()
